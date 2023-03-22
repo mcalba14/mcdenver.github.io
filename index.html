@@ -1,11 +1,146 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en" class="scroll-smooth">
+
 <head>
-<title>MDEA</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDEA</title>
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script defer src="js/alpine.js"></script>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
 </head>
-<body style="justify-content:center;">
-<h1 style="color:black;">Hi!</h1>
-  <p><h2>I'm</h2> <h3 style="color:#42f5c8;">Mc Denver Alba</h3></p>
+
+<body class="bg-gray-800 font-sans">
+    <div class="" x-data="{ open: false }">
+        <div class="fixed top-0 z-10 w-full bg-gray-900 text-white">
+            <nav class="flex justify-between items-center">
+                <a href="#"
+                    class="pl-10 py-6 font-thin text-transparent text-2xl bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-500">{
+                    MDEA }</a>
+                <ul class="flex font-thin gap-4 pr-10">
+                    <li class="grid content-center ">
+                        <a href="#Home"
+                            class="hidden md:block px-3 relative rounded-xl after:border after:border-gray-900 after:-left-[0%] after:transition-all after:ease-in-out after:rounded-lg after:w-[0%] after:-bottom-3 after:h-1 after:absolute after:duration-300 hover:after:w-[calc(100%+16px)] hover:after:border-cyan-600 hover:after:bg-cyan-600 hover:after:ease-in-out">
+                            <span class="text-cyan-500 font-thin">01.</span> Home</a>
+                    </li>
+                    <li class="grid content-center"><a href="#About"
+                            class="hidden md:block px-3 relative rounded-xl after:border after:border-gray-900 after:-left-[0%] after:transition-all after:ease-in-out after:rounded-lg after:w-[0%] after:-bottom-3 after:h-1 after:absolute after:duration-300 hover:after:w-[calc(100%+16px)] hover:after:border-cyan-600 hover:after:bg-cyan-600 hover:after:ease-in-out"><span
+                                class="text-cyan-500 font-thin">02.</span>
+                            About</a>
+                    </li>
+                    <li class="grid content-center"><a href="#Contact"
+                            class="hidden md:block px-3 relative rounded-xl after:border after:border-gray-900 after:-left-[0%] after:transition-all after:ease-in-out after:rounded-lg after:w-[0%] after:-bottom-3 after:h-1 after:absolute after:duration-300 hover:after:w-[calc(100%+16px)] hover:after:border-cyan-600 hover:after:bg-cyan-600 hover:after:ease-in-out"><span
+                                class="text-cyan-500 font-thin">03.</span>
+                            Contact</a>
+                    </li>
+                    <li class="grid content-center">
+                        <button
+                            class="hidden md:block border border-cyan-500 py-2 px-4 rounded-full hover:bg-cyan-500 hover:bg-opacity-50">Download
+                            CV</button>
+                    </li>
+                    <li>
+                        <div @click="open = ! open" x-on:click.away="open = false"
+                            class="md:hidden group flex h-14 w-14 cursor-pointer items-center justify-center rounded-xl bg-gray-800 p-2 hover:bg-slate-200 z-20 relative">
+                            <div class="space-y-2">
+                                <span
+                                    class="block h-1 w-10 origin-center rounded-full bg-white transition-transform ease-in-out group-hover:translate-y-1.5 group-hover:rotate-45"></span>
+                                <span
+                                    class="block h-1 w-8 origin-center rounded-full bg-cyan-500 transition-transform ease-in-out group-hover:w-10 group-hover:-translate-y-1.5 group-hover:-rotate-45"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <div x-show="open" class="absolute w-full flex justify-center bg-gray-900 pt-72 px-10 pb-10"
+                    x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90"
+                    x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300"
+                    x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
+                    <ul class="grid gap-4">
+                        <li class="flex justify-center">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="flex justify-center">
+                            <a href="#About">About</a>
+                        </li>
+                        <li class="flex justify-center">
+                            <a href="#Contact">Contact</a>
+                        </li>
+                        <li class="flex justify-center">
+                            <button
+                                class="border border-cyan-500 py-2 px-4 rounded-full hover:bg-cyan-500 hover:bg-opacity-50">Download
+                                CV</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+            <!-- Socials -->
+            <div class="p-10 pb-24 fixed h-screen grid content-end">
+                <ul class="grid gap-3">
+                    <li>
+                        <a href="" class="text-white hover:text-cyan-500 "><i
+                                class="fa-brands fa-facebook hover:animate-bounce"></i></a>
+                    </li>
+                    <li><a href="" class="text-white hover:text-cyan-500"><i
+                                class="fa-brands fa-instagram hover:animate-bounce"></i></a>
+                    </li>
+                    <li><a href="" class="text-white hover:text-cyan-500"><i
+                                class="fa-brands fa-github hover:animate-bounce"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <section id="Home"
+            class="pt-24 px-10 lg:px-44 grid grid-cols-1 md:grid-cols-2 content-center h-screen text-white">
+
+            <div class="flex justify-center">
+                <div>
+                    <h2 class="text-xl md:text-2xl">Hi 👋, I'm</h2>
+                    <h1
+                        class="text-4xl md:text-6xl opacity-80 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-white ">
+                        Mc Denver Alba</h1>
+                    <p class="text-2xl md:text-4xl">Web Developer</p>
+                </div>
+            </div>
+            <div class="flex justify-center transition ease-in-out delay-150 hover:translate-y-2">
+                <div
+                    class="ml-8 mt-2 md:mt-0 md:ml-14 h-60 w-60 bg-transparent border-2 border-cyan-500 shadow-lg shadow-cyan-500/50 rounded-xl origin-center hover:bg-cyan-500 hover:opacity-50">
+                </div>
+                <img class="h-60 w-60 mt-10 rounded-xl absolute bg-slate-300" src="MDEA.png" alt="">
+                <div
+                    class="absolute h-60 w-60 rounded-xl mt-10 border border-cyan-500 before:absolute before:-bottom-2 before:-right-2 before:h-4 before:w-4 before:border-b-2 before:border-r-2 before:transition-all before:border-cyan-500 before:rounded-sm before:duration-300 before:ease-in-out after:absolute after:-top-2 after:-left-2 after:h-4 after:w-4 after:border-t-2 after:border-l-2 after:rounded-sm after:transition-all after:border-cyan-500 after:duration-300 after:ease-in-out hover:before:h-[calc(100%+16px)] hover:before:w-[calc(100%+16px)] hover:after:h-[calc(100%+16px)] hover:after:w-[calc(100%+16px)]">
+                </div>
+            </div>
+        </section>
+
+        <section id="About" class="px-10 md:px-32 h-screen text-white pt-24">
+            <div class="flex justify-center">
+                <h1 class="text-4xl flex justify-center w-56"><span class="text-cyan-500 font-thin ">01.</span>&nbsp;
+                    About Me</h1>
+            </div>
+            <div class="flex justify-center mt-1">
+                <div class="w-52 border border-cyan-500"></div>
+            </div>
+
+        </section>
+        <section id="Contact" class="px-10 md:px-32 h-screen text-white pt-24">
+            <h1 class="text-4xl flex justify-center"><span class="text-cyan-500 font-thin">#.
+                </span>&nbsp; Contact
+            </h1>
+            <div class="flex justify-center mt-1">
+                <div class="w-44 border border-cyan-500"></div>
+            </div>
+        </section>
+
+    </div>
 </body>
+
 </html>

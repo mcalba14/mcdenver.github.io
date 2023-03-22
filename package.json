@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build-js": "npx esbuild src/script.js --outfile=js/alpine.js --bundle --watch"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.3.0",
+    "alpinejs": "^3.12.0",
+    "esbuild": "^0.17.11",
+    "font-awesome": "^4.7.0"
+  }
+}
